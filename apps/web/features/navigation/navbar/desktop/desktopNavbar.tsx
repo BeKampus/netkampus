@@ -10,7 +10,7 @@ export default function HeaderController() {
   return (
     <div className="relative w-full">
       {isExpanded ? (
-        <DesktopExpandedNavbar />
+        <DesktopExpandedNavbar onClose={() => setIsExpanded(false)} />
       ) : (
         <DesktopCompactedNavbar onOpen={() => setIsExpanded(true)} />
       )}
